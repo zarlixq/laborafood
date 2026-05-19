@@ -2,13 +2,14 @@
 
 @theme {
   --color-bg: #FAFAF7;
-  --color-bg-alt: #F4F4EE;
-  --color-ink: #0A1929;
-  --color-ink-soft: #4A5567;
-  --color-brand: #0F4C75;
-  --color-brand-2: #3DA5D9;
-  --color-lime: #C4D82E;
-  --color-line: #E5E5DC;
+  --color-bg-alt: #F1F0E8;
+  --color-ink: #0F1F1A;
+  --color-ink-soft: #4A5651;
+  --color-brand: #1B4332;
+  --color-brand-2: #2D6A4F;
+  --color-brand-soft: #D8E2DC;
+  --color-accent: #95D5B2;
+  --color-line: #E5E3D8;
   --color-white: #FFFFFF;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -18,9 +19,7 @@
 }
 
 @layer base {
-  :root {
-    color-scheme: light only;
-  }
+  :root { color-scheme: light only; }
 
   html {
     scroll-behavior: smooth;
@@ -61,16 +60,11 @@
     margin-inline: auto;
     padding-inline: 1.5rem;
   }
-
   @media (min-width: 1024px) {
-    .container-app {
-      padding-inline: 3rem;
-    }
+    .container-app { padding-inline: 3rem; }
   }
 
-  .section-y {
-    padding-block: clamp(5rem, 12vw, 10rem);
-  }
+  .section-y { padding-block: clamp(5rem, 12vw, 10rem); }
 
   .eyebrow {
     font-family: var(--font-sans);
@@ -81,27 +75,9 @@
     color: var(--color-brand);
   }
 
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
 
-  .text-pretty {
-    text-wrap: pretty;
-  }
-
-  /* Marquee — infinite horizontal scroll */
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 40s linear infinite;
-  }
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* Soft blob */
   .blob {
     position: absolute;
     border-radius: 9999px;
@@ -110,7 +86,6 @@
     pointer-events: none;
   }
 
-  /* Mouse scroll cue */
   .scroll-cue {
     width: 22px;
     height: 36px;
@@ -121,11 +96,9 @@
   .scroll-cue::after {
     content: "";
     position: absolute;
-    left: 50%;
-    top: 6px;
+    left: 50%; top: 6px;
     transform: translateX(-50%);
-    width: 3px;
-    height: 8px;
+    width: 3px; height: 8px;
     background: var(--color-ink-soft);
     border-radius: 2px;
     animation: scroll-cue-dot 1.6s ease-in-out infinite;
@@ -135,11 +108,28 @@
     50% { transform: translate(-50%, 10px); opacity: 1; }
   }
 
-  /* Progress dot path for timeline */
   .dashed-line {
     background-image: linear-gradient(to right, var(--color-line) 50%, transparent 50%);
     background-size: 12px 2px;
     background-repeat: repeat-x;
+  }
+
+  /* Pulse dot for tracking timeline */
+  .pulse-dot {
+    position: relative;
+  }
+  .pulse-dot::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    opacity: 0.5;
+    animation: pulse-ring 1.6s ease-out infinite;
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    100% { transform: scale(1.8); opacity: 0; }
   }
 }
 
@@ -150,5 +140,4 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .marquee-track { animation: none; }
 }

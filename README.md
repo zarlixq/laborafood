@@ -1,19 +1,23 @@
-# LabAdı — Gıda Analiz Laboratuvarı Web Sitesi
+# LaboraFood — Food Analysis Lab Site (V2)
 
-Modern, animasyonlu, mobile-first kurumsal tanıtım sitesi.
-**Next.js 15** (App Router · JavaScript) · **Tailwind v4** · **Framer Motion** · **Supabase**.
+Modern, mobile-first kurumsal site + **çift dil (SQ default / EN)** + Supabase admin paneli + numune takip.
+
+**Stack:** Next.js 15 (App Router · JS) · Tailwind v4 · Framer Motion · next-intl v4 · Supabase (auth + DB + storage).
 
 ---
 
-## Kurulum
+## Hızlı kurulum
 
 ```bash
 npm install
-cp .env.local.example .env.local   # (proje zaten .env.local içeriyor)
+cp .env.local.example .env.local   # (.env.local zaten dolu)
 npm run dev
 ```
 
-Tarayıcı: <http://localhost:3000>
+Açılan adresler:
+- **Public site (SQ default):** http://localhost:3000 → `/sq` redirect
+- **Public site (EN):** http://localhost:3000/en
+- **Admin panel:** http://localhost:3000/admin
 
 ### Production
 
@@ -26,97 +30,168 @@ npm start
 
 ## Ortam Değişkenleri
 
-`.env.local` içinde:
+`.env.local`:
 
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://<project>.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon-or-publishable-key>
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-# SUPABASE_SERVICE_ROLE_KEY=  (opsiyonel — admin paneli için ilerde)
+NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ... veya sb_publishable_...
+NEXT_PUBLIC_SITE_URL=https://laborafood.com
+# SUPABASE_SERVICE_ROLE_KEY=  (opsiyonel — şu an kullanılmıyor)
 ```
 
-Anon key + RLS politikası, teklif/iletişim formu için yeterli. Service role
-key sadece ileride admin tarafına gerekli olduğunda eklenecek.
+Mevcut projede zaten Supabase **laborafood** projesinin URL'i ve anon key'i dolu.
 
 ---
 
-## Klasör Yapısı
+## Supabase yapısı
 
-```
-/
-├── app/                  Next.js App Router sayfaları
-│   ├── layout.js         Root layout — fontlar, JSON-LD, global metadata
-│   ├── page.js           Anasayfa (blocks/ içindekileri kompoze eder)
-│   ├── globals.css       Tailwind v4 + tema + utility'ler
-│   ├── sitemap.js        /sitemap.xml
-│   ├── robots.js         /robots.txt
-│   ├── icon.svg          Favicon (SVG)
-│   ├── actions/teklif.js Server action — Supabase insert
-│   └── (sayfa klasörleri)
-├── blocks/               Sayfa section'ları (Hero, Navbar, …)
-├── components/
-│   ├── ui/               Button, Card, Badge, Input/Textarea
-│   ├── animations/       FadeIn, StaggerChildren, CountUp, Marquee, RevealImage
-│   └── forms/TeklifForm  Multi-step teklif formu (client)
-├── lib/                  İçerik verileri + helper'lar
-│   ├── analyses.js       Tüm analizler — kategori + metod + süre
-│   ├── services.js       4 ana hizmet + showcase sahneleri
-│   ├── navigation.js     Üst/alt menü + firma bilgileri
-│   ├── testimonials.js   Müşteri görüşleri
-│   ├── blog.js           Blog yazıları
-│   ├── accreditation.js  Sertifikalar
-│   ├── processSteps.js   Süreç adımları
-│   ├── stats.js          Sayılar (count-up)
-│   ├── company.js        Hakkımızda — değerler, ekip, tesis
-│   ├── motion.js         Framer Motion preset'leri
-│   ├── seo.js            metadata + JSON-LD üreticisi
-│   └── supabase.js       createBrowserClient / createServiceClient
-└── public/og-default.svg OG görseli
-```
+Tablolar (`apply_migration` ile oluşturuldu):
 
----
+| Tablo | Amaç |
+|---|---|
+| `samples`         | Numune takip (her birinde `tracking_code` = `LF-YYYY-NNNN`) |
+| `samples_public` (view) | Public API'nin okuduğu, sızdırmaya karşı korumalı view |
+| `blog_posts`      | Çift dilli blog yazıları (title_sq, title_en, content_sq, content_en …) |
+| `quote_requests`  | Form gönderileri (teklif + kontakt, `source` ile ayrılır) |
+| `admins`          | Admin paneline erişebilen Supabase user_id'leri |
 
-## Nereyi Nereden Değiştiririm?
+**Storage bucket:** `reports` (public, sadece admin upload edebilir, herkes indirebilir).
 
-| Değişiklik                | Dosya                            |
-|---------------------------|----------------------------------|
-| Renkler                   | `app/globals.css` → `@theme`     |
-| Fontlar                   | `app/layout.js` (next/font)      |
-| Şirket adı / iletişim     | `lib/navigation.js` → `company`  |
-| Üst menü ve footer        | `lib/navigation.js`              |
-| Hizmetler                 | `lib/services.js`                |
-| Analizler                 | `lib/analyses.js`                |
-| Sayılar (Stats)           | `lib/stats.js`                   |
-| Müşteri görüşleri         | `lib/testimonials.js`            |
-| Blog yazıları             | `lib/blog.js`                    |
-| Akreditasyon belgeleri    | `lib/accreditation.js`           |
-| Ekip ve değerler          | `lib/company.js`                 |
-| Süreç timeline'ı          | `lib/processSteps.js`            |
-| Sayfa metadata (SEO)      | Her `page.js` içinde `metadata`  |
-| JSON-LD schema            | `lib/seo.js` → `siteJsonLd`      |
+**RPC:** `generate_tracking_code()` — yıl + sıfır-dolgulu sayı üretir.
 
-Gerçek görselleri eklemek için `next/image`'ı kullanın; harici hostlar için
-`next.config.js` → `images.remotePatterns` listesine domain ekleyin.
+### İlk admin kullanıcısını eklemek (zorunlu)
 
----
-
-## Veritabanı (Supabase)
-
-Tek tablo: `quote_requests` (yaratıldı, RLS açık, anon insert serbest).
-
-Kayıtları görmek için:
+1. Supabase Studio → **Authentication → Users → Add user** (email + parola).
+2. SQL Editor:
 
 ```sql
-select * from quote_requests order by created_at desc limit 20;
+insert into public.admins (user_id, email)
+  select id, email from auth.users where email = 'admin@laborafood.com';
 ```
 
-Supabase Studio: <https://supabase.com/dashboard/project/qyyjpmchernldzjpfuzc>
+Sonra http://localhost:3000/admin/login adresinden bu kimlikle gir.
 
-Tablo kolonları:
-- `company_name`, `tax_no`, `sector`
-- `product_name`, `analysis_types[]`, `notes`
-- `contact_name`, `email`, `phone`, `kvkk_accepted`
-- `source` (`website-quote` / `website-contact`), `status` (`new` …)
+---
+
+## Site Yapısı
+
+```
+app/
+├── [locale]/                      Public site (sq, en)
+│   ├── page.js                    Ana sayfa
+│   ├── about|rreth-nesh/page.js
+│   ├── services|sherbimet/page.js
+│   ├── analyses|analizat/page.js
+│   ├── accreditation|akreditimi/page.js
+│   ├── tracking|gjurmim/page.js   Public numune takip
+│   ├── blog/page.js
+│   ├── contact|kontakt/page.js
+│   ├── quote|oferta/page.js
+│   └── not-found.js
+├── admin/                         Admin (auth-protected, monolingual SQ)
+│   ├── login/page.js
+│   ├── page.js                    Dashboard
+│   ├── samples/{page,new,[id]}    CRUD numune
+│   ├── blog/{page,new,[id]}       CRUD blog
+│   └── quotes/page.js             Gelen kutusu
+├── api/tracking/route.js          GET ?code=LF-YYYY-NNNN
+├── actions/                       Server actions
+│   ├── auth.js, quote.js, samples.js, blog.js, quotes-admin.js
+├── sitemap.js, robots.js, icon.svg, layout.js, globals.css
+
+blocks/    — Public sayfa section'ları (Navbar, Hero, ServicesGrid, AnalysisShowcase, WhyLaboraFood, ProcessTimeline, AccreditationStatus, RegulatoryCompliance, TrackingCTA, BlogPreview, CTASection, Footer)
+components/
+├── ui/        Button, Card, Badge, Input
+├── animations/  FadeIn, StaggerChildren, CountUp, Marquee, RevealImage
+├── forms/     QuoteForm.jsx
+├── admin/     AdminSidebar, StatusBadge, BlogEditor
+├── LocaleSwitcher.jsx · TrackingTimeline.jsx · SetHtmlLang.jsx
+
+lib/        Veriler + Supabase + SEO + motion presets
+messages/   sq.json · en.json    (tüm UI metinleri buradan beslenir)
+i18n/       routing.js (locales + lokalize URL slug'ları), request.js, navigation.js
+middleware.js — admin auth + i18n birleşik
+```
+
+---
+
+## Çift Dil (next-intl)
+
+- **Default:** Arnavutça (`sq`)
+- **EN:** İngilizce, lokalize URL slug'ları (örn. `/sq/sherbimet` ↔ `/en/services`)
+- **Switcher:** Navbar sağ üstte minimal `SQ | EN` toggle (mobile'da hamburger yanında compact)
+
+### Metin değiştirme
+
+Tüm UI metinleri `messages/sq.json` ve `messages/en.json` içinde. Bir başlığı değiştirmek için:
+
+1. `messages/sq.json` içinde key'i bul
+2. Değeri güncelle
+3. `messages/en.json` içinde aynı key'i çevir
+4. Sayfayı yenile
+
+### URL slug'ları değiştirme
+
+`i18n/routing.js` içindeki `pathnames` objesinde tanımlı:
+
+```js
+"/services": { sq: "/sherbimet", en: "/services" }
+```
+
+---
+
+## Renk paleti
+
+`app/globals.css` `@theme` bloğunda:
+
+| Token             | Hex      | Kullanım |
+|-------------------|----------|----------|
+| `--color-bg`      | `#FAFAF7`| Body |
+| `--color-bg-alt`  | `#F1F0E8`| Section ayrımı |
+| `--color-ink`     | `#0F1F1A`| Birincil metin |
+| `--color-ink-soft`| `#4A5651`| İkincil metin |
+| `--color-brand`   | `#1B4332`| Primary (derin yeşil) |
+| `--color-brand-2` | `#2D6A4F`| Accent yeşil |
+| `--color-brand-soft`|`#D8E2DC`| Pastel arka plan |
+| `--color-accent`  | `#95D5B2`| Vurgu yeşili |
+| `--color-line`    | `#E5E3D8`| Border'lar |
+
+Tüm renkler Tailwind utility'leri olarak (`bg-brand`, `text-ink-soft`, `border-line` …) kullanılır.
+
+---
+
+## Numune Takip Akışı
+
+1. **Admin** `/admin/samples/new` → form doldur → submit.
+2. Sistem otomatik `LF-YYYY-NNNN` formatında tracking code üretir (RPC `generate_tracking_code`).
+3. Müşteriye sözlü/yazılı olarak bu kod verilir.
+4. **Müşteri** `/sq/gjurmim` (veya `/en/tracking`) → kodu girer → timeline + durum görür.
+5. Status `completed` olunca admin PDF rapor upload eder → public sayfada "Shkarko PDF" butonu görünür.
+
+### Status değerleri
+
+`received → preparing → analyzing → verifying → completed`
+
+Admin değiştirir; trigger `completed_at`'i otomatik doldurur.
+
+### Gizlilik
+
+Public tracking API'si `samples_public` view'ından okur — müşteri adı, telefon, email, internal notlar **döndürülmez**, sadece:
+- `tracking_code`, `product_name`, `analysis_type`, `status`, `received_at`, `estimated_completion`, `completed_at`, `report_url`
+
+---
+
+## Akreditasyon — Dürüst Konum
+
+**Sahte ISO/TÜRKAK/etc. logosu YOK.** Site açıkça belirtir:
+- LaboraFood, **DAK (Drejtoria e Akreditimit e Kosovës)** akreditasyon sürecindedir
+- ISO/IEC 17025:2017 standardına göre kalite sistemi kurulu
+- Süreç adımları timeline ile gösteriliyor (3'ü tamamlandı, 1'i devam ediyor, 2'si bekliyor)
+
+Mevzuat referansları (gerçek otoriteler — güvenle anılır):
+- **AUV** (Agjencia e Ushqimit dhe Veterinarisë)
+- **EU 178/2002**
+- **SK EN ISO**
 
 ---
 
@@ -124,59 +199,18 @@ Tablo kolonları:
 
 1. Repoyu GitHub'a push'la.
 2. Vercel'de **Import Project** → bu repo.
-3. **Environment Variables** sekmesine `.env.local`'deki değerleri ekle.
+3. **Environment Variables**'a `.env.local` değerlerini ekle (özellikle `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SITE_URL=https://laborafood.com`).
 4. Build settings: framework otomatik (Next.js) algılanır.
-5. Domain bağla, `NEXT_PUBLIC_SITE_URL`'i prod domain'le güncelle.
+5. Domain bağla (`laborafood.com`), `NEXT_PUBLIC_SITE_URL`'i prod domain'e çevir.
 
 ---
 
-## Tasarım Sistemi
+## SEO
 
-| Token        | Değer       | Kullanım                       |
-|--------------|-------------|--------------------------------|
-| `--color-bg` | #FAFAF7     | Body arka plan                 |
-| `--color-bg-alt` | #F4F4EE | Section ayrımı                 |
-| `--color-ink` | #0A1929    | Birincil metin                 |
-| `--color-ink-soft` | #4A5567 | İkincil metin               |
-| `--color-brand` | #0F4C75  | Primary, butonlar, vurgular    |
-| `--color-brand-2` | #3DA5D9 | Açık akrilik mavi            |
-| `--color-lime` | #C4D82E   | Lab vurgu rengi                |
-| `--color-line` | #E5E5DC   | Border'lar                     |
-
-Tüm renkler `bg-brand`, `text-ink-soft` gibi Tailwind utility olarak kullanılabilir.
-
----
-
-## Animasyon Felsefesi
-
-- Section'lar **scroll reveal** (opacity + y, 0.6s)
-- Grid'lerde **stagger** (0.08s gecikme)
-- Hero'da **parallax** (`useScroll` + `useTransform`)
-- `AnalysisShowcase` **sticky scroll storytelling**
-- Stats'te **count-up** (görünür olunca)
-- Trust bar **marquee** (sonsuz yatay)
-- `prefers-reduced-motion` global olarak respect ediliyor (`globals.css`)
-
----
-
-## İleride Admin Panel Eklemek İçin
-
-Mimari hazır — şu adımlar yeterli:
-
-1. **`/admin` route group** ekle: `app/(admin)/admin/...`
-2. **Supabase Auth** kur:
-   - Yeni `profiles` tablosu (`user_id`, `role`)
-   - Email/şifre veya magic link
-3. `lib/supabase.js` zaten **`createServiceClient`** export ediyor — server'da
-   admin sorguları için kullan.
-4. Yeni tablolar için MCP `apply_migration` ile geliştir:
-   - `samples` (numune takip)
-   - `analysis_orders` (sipariş)
-   - `reports` (rapor dosyaları)
-5. Middleware ile `/admin/*`'a auth kontrolü ekle.
-
-`quote_requests` tablosu zaten `status` ve `id` kolonlarıyla hazır — admin
-panelindeki "yeni talepler" listesini bu tablodan beslersin.
+- `/sitemap.xml` — her sayfa için SQ + EN versiyonları, `alternates.languages` ile.
+- `/robots.txt` — admin/api hariç tüm crawler'lara izin.
+- Per-page metadata: `app/[locale]/*/page.js` içinde `generateMetadata()`.
+- JSON-LD `MedicalBusiness` + `geo.region=XK` + `hreflang` (sq-XK, en, x-default) `lib/seo.js` üzerinden.
 
 ---
 
@@ -188,3 +222,20 @@ npm run build    # prod build
 npm start        # prod server
 npm run lint     # next lint
 ```
+
+---
+
+## Yapılan Düzeltmeler (V1 → V2)
+
+| Değişiklik | Açıklama |
+|---|---|
+| 🌿 Renk paleti | Mavi → derin orman yeşili + krem |
+| 🏷️ Marka | LabAdı → **LaboraFood** (Prizren, Kosova) |
+| 🐛 AnalysisShowcase | Scroll bug → IntersectionObserver pattern ile baştan yazıldı |
+| 🗑️ Sahte içerik | Testimonials/TrustBar/Stats kaldırıldı |
+| ➕ Yeni section'lar | WhyLaboraFood, AccreditationStatus (dürüst), RegulatoryCompliance, TrackingCTA |
+| 🌐 i18n | next-intl v4 entegrasyonu, SQ/EN, lokalize URL slug'ları |
+| 🔐 Admin panel | Supabase Auth + sidebar + CRUD (samples / blog / quotes) |
+| 📦 Numune takip | `LF-YYYY-NNNN` kodları + public tracking sayfası + PDF rapor indirme |
+| 🧪 Hizmetler | 4 → 2 (sadece mikrobiyoloji + kimya) |
+| 📐 Akreditasyon | Sahte logolar gitti, DAK süreç timeline'ı eklendi |

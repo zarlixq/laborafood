@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "siteName": "LaboraFood",
+    "tagline": "Food analysis laboratory in Kosovo",
+    "defaultDescription": "Independent microbiological and chemical food analysis laboratory in Prizren, Kosovo."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "analyses": "Analyses",
+    "accreditation": "Accreditation",
+    "tracking": "Sample Tracking",
+    "blog": "Blog",
+    "contact": "Contact",
+    "quote": "Get a Quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language"
+  },
+  "common": {
+    "explore": "Explore",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "loading": "Loading…",
+    "send": "Send",
+    "showAll": "Show all",
+    "details": "Details",
+    "downloadPdf": "Download PDF",
+    "search": "Search",
+    "all": "All",
+    "step": "Step",
+    "results": "results",
+    "noResults": "No results found."
+  },
+  "hero": {
+    "badge": "Microbiology & Chemistry Lab in Kosovo",
+    "title": "Food safety,",
+    "titleAccent": "spoken in the language of science.",
+    "subtitle": "Microbiological and chemical analyses for producers and the food industry in Kosovo and the Balkans.",
+    "ctaPrimary": "Get a Quote",
+    "ctaSecondary": "Browse Analyses",
+    "scrollCue": "Explore",
+    "card1": "Salmonella — Negative",
+    "card2": "Report ready",
+    "card3": "pH: 6.4 — Normal"
+  },
+  "services": {
+    "eyebrow": "OUR SERVICES",
+    "title": "What we analyse",
+    "subtitle": "Two core domains with validated methods and calibrated equipment.",
+    "viewDetails": "View details",
+    "micro": {
+      "title": "Microbiological Analyses",
+      "subtitle": "Pathogens, hygiene indicators, spoilage organisms",
+      "h1": "Salmonella spp.",
+      "h2": "Escherichia coli (E. coli)",
+      "h3": "Listeria monocytogenes",
+      "h4": "Staphylococcus aureus",
+      "h5": "Total Plate Count (TPC)",
+      "h6": "Yeast & Mould",
+      "h7": "Enterobacteriaceae",
+      "h8": "Bacillus cereus"
+    },
+    "chem": {
+      "title": "Chemical Analyses",
+      "subtitle": "Composition, residues, additives, nutrition",
+      "h1": "Heavy metals (Pb, Cd, Hg, As)",
+      "h2": "Pesticide residues",
+      "h3": "Food additives",
+      "h4": "Nutrition panel",
+      "h5": "Moisture & dry matter",
+      "h6": "pH & acidity",
+      "h7": "Mycotoxins (Aflatoxin, OTA)",
+      "h8": "Salt content"
+    }
+  },
+  "why": {
+    "eyebrow": "WHY LABORAFOOD",
+    "title": "Why choose LaboraFood",
+    "accuracy":     { "title": "Scientific accuracy",  "desc": "Validated methods, calibrated equipment and quality control at every step." },
+    "speed":        { "title": "Fast reporting",       "desc": "Microbiology 3–7 working days · Chemistry 5–10 working days." },
+    "privacy":      { "title": "Confidentiality",      "desc": "Customer data and results are kept per ISO/IEC 17025 §4.2 principles." },
+    "transparency": { "title": "Transparent process",  "desc": "Each sample receives a unique tracking code — follow status online." }
+  },
+  "showcase": {
+    "eyebrow": "PROCESS",
+    "title": "From sample to result — an analysis journey",
+    "subtitle": "Each scene reveals one step from inside the lab.",
+    "scene": "Scene",
+    "patogens": {
+      "title": "Pathogen detection",
+      "desc": "Salmonella, Listeria and E. coli are identified with ISO-based methods, with preliminary results within 24–72 hours."
+    },
+    "chemistry": {
+      "title": "Precise chemical analysis",
+      "desc": "HPLC, GC-MS and ICP-MS detect residues and additives at trace levels — calibrated routinely, with duplicate readings."
+    },
+    "reporting": {
+      "title": "Professional signed report",
+      "desc": "A PDF report, ready for audit and inspection, is delivered within 5–10 working days."
+    }
+  },
+  "process": {
+    "eyebrow": "PROCESS",
+    "title": "From sample to report — transparent process",
+    "subtitle": "Every step is logged, traceable and inspection-ready.",
+    "stepLabel": "STEP",
+    "step1": { "title": "Sample intake",   "desc": "The sample arrives at the lab, is barcoded, registered and verified together with documents." },
+    "step2": { "title": "Preparation",     "desc": "The team prepares the sample for the selected method — homogenisation, filtration, conditioning." },
+    "step3": { "title": "Analysis",        "desc": "Tests are run with validated methods on calibrated equipment, with parallel controls." },
+    "step4": { "title": "Verification",    "desc": "Results are double-checked by technical staff — deviations are re-run." },
+    "step5": { "title": "Reporting",       "desc": "A signed PDF report is uploaded to our system; you retrieve it with your sample code." }
+  },
+  "accreditation": {
+    "eyebrow": "ACCREDITATION",
+    "title": "Our accreditation journey",
+    "body": "LaboraFood is in the process of accreditation by the Kosovo Accreditation Directorate (DAK), under the international standard ISO/IEC 17025:2017. Our quality management system has been built around these principles from day one.",
+    "honestyNote": "We don't claim accreditation we don't have — here's exactly where we are.",
+    "steps": {
+      "qms":         "Quality management system established",
+      "docs":        "Documentation prepared",
+      "application": "DAK application — in progress",
+      "onsite":      "On-site assessment",
+      "decision":    "Accreditation decision"
+    },
+    "status": {
+      "done":       "Done",
+      "inProgress": "In progress",
+      "pending":    "Pending"
+    }
+  },
+  "compliance": {
+    "eyebrow": "COMPLIANCE",
+    "title": "We work within regulatory frameworks",
+    "subtitle": "Our methodology respects Kosovo and EU regulations.",
+    "auv":   { "title": "AUV — Food and Veterinary Agency", "desc": "Compliance with Kosovo national regulations on food safety." },
+    "eu178": { "title": "EU Regulation 178/2002",            "desc": "General principles and requirements of European food law." },
+    "skeniso":{ "title": "SK EN ISO — Kosovo Standards",     "desc": "Our methodology is grounded in Kosovo standards and international ISO standards." }
+  },
+  "trackingCta": {
+    "title": "Do you have a sample at the lab?",
+    "subtitle": "Enter the tracking code and view the current analysis status.",
+    "button": "Track Sample"
+  },
+  "tracking": {
+    "eyebrow": "SAMPLE TRACKING",
+    "title": "Track your sample",
+    "subtitle": "Enter your sample code (e.g. LF-2026-0123) to see the current status.",
+    "placeholder": "e.g. LF-2026-0123",
+    "button": "Search",
+    "errors": {
+      "invalid": "Invalid sample code. Format: LF-YYYY-NNNN.",
+      "notFound": "No sample found for this code."
+    },
+    "labels": {
+      "product": "Product",
+      "analysisType": "Analysis type",
+      "receivedAt": "Received at",
+      "estimatedCompletion": "Estimated completion",
+      "completedAt": "Completed at",
+      "currentStatus": "Current status"
+    },
+    "statuses": {
+      "received":  "Received",
+      "preparing": "Preparing",
+      "analyzing": "Analysing",
+      "verifying": "Verifying",
+      "completed": "Completed"
+    },
+    "analysisTypes": {
+      "microbiology": "Microbiology",
+      "chemistry":    "Chemistry",
+      "both":         "Microbiology + Chemistry"
+    },
+    "reportReady": "Your report is ready."
+  },
+  "blogSection": {
+    "eyebrow": "KNOWLEDGE BASE",
+    "title": "From the lab",
+    "subtitle": "Methods, regulations and notes from the field — for producers.",
+    "allPosts": "All articles",
+    "readingTime": "min read"
+  },
+  "blog": {
+    "eyebrow": "BLOG",
+    "title": "Writings from the lab",
+    "subtitle": "Methods, regulations and practical knowledge."
+  },
+  "cta": {
+    "title": "Do you have a sample for analysis?",
+    "titleAccent": "We're ready.",
+    "subtitle": "Get a quote in 5 minutes — reply within 24 hours.",
+    "primary": "Get a Quote",
+    "secondary": "Contact on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Independent food analysis laboratory in Kosovo.",
+    "services": "Services",
+    "corporate": "Company",
+    "contact": "Contact",
+    "address": "Prizren, Kosovo",
+    "hours": "Mon–Fri 08:30–17:00",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "about": {
+    "eyebrow": "ABOUT US",
+    "title": "Science,",
+    "titleAccent": "impartiality,",
+    "titleTail": "homework.",
+    "intro": "LaboraFood is an independent food analysis laboratory based in Prizren. We work with producers and the food industry to ensure safety, quality and regulatory compliance.",
+    "valuesEyebrow": "OUR PRINCIPLES",
+    "valuesTitle": "Mission — Vision — Values",
+    "values": {
+      "mission": { "title": "Mission", "body": "Deliver accurate, fast and transparent analyses that protect consumer health and brand trust." },
+      "vision":  { "title": "Vision",  "body": "Become the most trusted food laboratory in Kosovo and the region — a reference for accuracy and professionalism." },
+      "values":  { "title": "Values",  "body": "Scientific honesty, customer closeness, continuous improvement — impartial results always come first." }
+    },
+    "facility": {
+      "eyebrow": "FACILITY",
+      "title": "Our laboratory",
+      "subtitle": "Dedicated areas for microbiology and chemistry, with sample-flow separation.",
+      "alt1": "Overview of the lab",
+      "alt2": "Chromatography equipment",
+      "alt3": "Microscope examination",
+      "alt4": "Sample preparation"
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "SERVICES",
+    "title": "Two domains,",
+    "titleAccent": "full coverage",
+    "subtitle": "Over 30 methods across microbiology and chemistry.",
+    "featured": "Featured analyses"
+  },
+  "analysesPage": {
+    "eyebrow": "ANALYSES",
+    "title": "All analyses",
+    "subtitle": "Filter by domain or search by analysis name.",
+    "searchPlaceholder": "Search analysis…"
+  },
+  "accreditationPage": {
+    "eyebrow": "ACCREDITATION",
+    "title": "The whole process,",
+    "titleAccent": "in the open",
+    "subtitle": "LaboraFood is in the accreditation process with the Kosovo Accreditation Directorate (DAK), per ISO/IEC 17025:2017."
+  },
+  "categories": {
+    "microbiology": "Microbiology",
+    "chemistry": "Chemistry"
+  },
+  "categoriesPlural": {
+    "microbiology": "Microbiology",
+    "chemistry": "Chemistry",
+    "regulation": "Regulation",
+    "news": "News"
+  },
+  "contactPage": {
+    "eyebrow": "CONTACT",
+    "title": "Let's talk",
+    "subtitle": "Have a quick question, need consulting or want a site visit? Fill out the form or contact us directly.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "First Last",
+      "email": "Email",
+      "emailPlaceholder": "example@company.com",
+      "message": "Your message",
+      "messagePlaceholder": "Briefly describe your question…",
+      "privacy": "Your data is processed per our privacy policy.",
+      "submit": "Send",
+      "submitting": "Sending…",
+      "successTitle": "Thank you!",
+      "successBody": "Your message was received. We will reply within 24 hours.",
+      "newMessage": "Write a new message"
+    },
+    "info": {
+      "address": "Prizren, Kosovo",
+      "hours": "Mon–Fri 08:30–17:00",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    }
+  },
+  "quotePage": {
+    "eyebrow": "GET A QUOTE",
+    "title": "Quote in 5 minutes",
+    "subtitle": "Fill in three steps — we'll reply with a detailed quote within 24 hours.",
+    "stepper": {
+      "step1": "Company",
+      "step2": "Product & Analyses",
+      "step3": "Contact"
+    },
+    "step1Title": "Company information",
+    "step2Title": "Product and analyses",
+    "step3Title": "Contact information",
+    "fields": {
+      "companyName": "Company name *",
+      "companyNamePlaceholder": "e.g. Bylmeti L.L.C.",
+      "productType": "Product type",
+      "productTypePlaceholder": "e.g. fresh cheese",
+      "analysesSelected": "selected",
+      "analysesLabel": "Requested analyses",
+      "message": "Notes",
+      "messagePlaceholder": "Anything else we should know?",
+      "contactPerson": "Full name *",
+      "contactPersonPlaceholder": "Responsible person",
+      "email": "Email *",
+      "emailPlaceholder": "example@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+383 …",
+      "privacyConsent": "I accept the privacy policy and the processing of my data.",
+      "privacyReadMore": "read more"
+    },
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Send Request",
+    "submitting": "Sending…",
+    "successTitle": "Thank you!",
+    "successBody": "Your request was sent. We will contact you by email or phone within 24 hours.",
+    "successHome": "Home",
+    "successAnalyses": "Browse Analyses",
+    "errors": {
+      "companyRequired": "Company name is required.",
+      "contactRequired": "Full name is required.",
+      "emailInvalid": "Enter a valid email.",
+      "privacyRequired": "You must accept the privacy policy to continue.",
+      "generic": "Something went wrong. Please try again.",
+      "allRequired": "All fields are required."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you are looking for has moved or doesn't exist.",
+    "back": "Back to Home"
+  }
+}

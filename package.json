@@ -9,16 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^15.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.46.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
-    "@supabase/supabase-js": "^2.46.1"
+    "next": "^15.0.3",
+    "next-intl": "^4.12.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "tailwindcss": "^4.0.0",
     "@tailwindcss/postcss": "^4.0.0",
-    "postcss": "^8.4.49"
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0"
   }
 }

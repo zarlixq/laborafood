@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require("next-intl/plugin");
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.js");
+
 const nextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "placehold.co" },
-      { protocol: "https", hostname: "ui-avatars.com" },
+      { protocol: "https", hostname: "dummyimage.com" },
+      { protocol: "https", hostname: "qyyjpmchernldzjpfuzc.supabase.co" },
     ],
   },
   experimental: {
@@ -12,4 +16,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

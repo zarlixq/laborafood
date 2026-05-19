@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "siteName": "LaboraFood",
+    "tagline": "Laborator i analizave të ushqimit në Kosovë",
+    "defaultDescription": "Laborator i pavarur i analizave mikrobiologjike dhe kimike të ushqimit në Prizren, Kosovë."
+  },
+  "nav": {
+    "home": "Ballina",
+    "about": "Rreth Nesh",
+    "services": "Shërbimet",
+    "analyses": "Analizat",
+    "accreditation": "Akreditimi",
+    "tracking": "Gjurmim Mostre",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "quote": "Merr Ofertë",
+    "openMenu": "Hape menynë",
+    "closeMenu": "Mbylle menynë",
+    "switchLanguage": "Ndrysho gjuhën"
+  },
+  "common": {
+    "explore": "Eksploro",
+    "back": "Kthehu",
+    "next": "Vazhdo",
+    "submit": "Dërgo",
+    "loading": "Duke u ngarkuar…",
+    "send": "Dërgo",
+    "showAll": "Shiko të gjitha",
+    "details": "Detajet",
+    "downloadPdf": "Shkarko PDF",
+    "search": "Kërko",
+    "all": "Të gjitha",
+    "step": "Hapi",
+    "results": "rezultat",
+    "noResults": "Nuk u gjet asnjë rezultat."
+  },
+  "hero": {
+    "badge": "Laborator i Mikrobiologjisë dhe Kimisë në Kosovë",
+    "title": "Siguria e ushqimit,",
+    "titleAccent": "e shprehur me gjuhën e shkencës.",
+    "subtitle": "Analiza mikrobiologjike dhe kimike për prodhuesit dhe industrinë ushqimore në Kosovë dhe Ballkan.",
+    "ctaPrimary": "Merr Ofertë",
+    "ctaSecondary": "Shiko Analizat",
+    "scrollCue": "Zbulo",
+    "card1": "Salmonella — Negative",
+    "card2": "Raporti gati",
+    "card3": "pH: 6.4 — Normal"
+  },
+  "services": {
+    "eyebrow": "SHËRBIMET TONA",
+    "title": "Çfarë analizojmë",
+    "subtitle": "Dy fusha kryesore me metoda të verifikuara dhe pajisje të kalibruara.",
+    "viewDetails": "Shiko detajet",
+    "micro": {
+      "title": "Analiza Mikrobiologjike",
+      "subtitle": "Patogjenë, tregues higjienik, mikroorganizma të dëmshëm",
+      "h1": "Salmonella spp.",
+      "h2": "Escherichia coli (E. coli)",
+      "h3": "Listeria monocytogenes",
+      "h4": "Staphylococcus aureus",
+      "h5": "Numërimi total i bakterieve (TPC)",
+      "h6": "Mavija dhe maja",
+      "h7": "Enterobacteriaceae",
+      "h8": "Bacillus cereus"
+    },
+    "chem": {
+      "title": "Analiza Kimike",
+      "subtitle": "Përbërje, mbetje, aditivë, vlera ushqyese",
+      "h1": "Metale të rënda (Pb, Cd, Hg, As)",
+      "h2": "Mbetjet e pesticideve",
+      "h3": "Aditivët ushqimorë",
+      "h4": "Vlerat ushqyese",
+      "h5": "Lagështia dhe lënda e thatë",
+      "h6": "pH dhe aciditeti",
+      "h7": "Mykotoksinat (Aflatoksina, OTA)",
+      "h8": "Përmbajtja e kripës"
+    }
+  },
+  "why": {
+    "eyebrow": "PSE LABORAFOOD",
+    "title": "Pse të zgjedhni LaboraFood",
+    "accuracy":     { "title": "Saktësi shkencore",   "desc": "Metoda të verifikuara, pajisje të kalibruara dhe kontroll cilësie në çdo hap." },
+    "speed":        { "title": "Raportim i shpejtë",  "desc": "Mikrobiologji 3–7 ditë pune · Kimike 5–10 ditë pune." },
+    "privacy":      { "title": "Konfidencialitet",    "desc": "Të dhënat e klientit dhe rezultatet ruhen sipas parimeve ISO/IEC 17025 §4.2." },
+    "transparency": { "title": "Proces transparent",  "desc": "Çdo mostër ka kod unik gjurmimi — statusi ndiqet online." }
+  },
+  "showcase": {
+    "eyebrow": "PROCES",
+    "title": "Nga mostra te rezultati — udhëtimi i një analize",
+    "subtitle": "Çdo skenë tregon një hap nga laboratori.",
+    "scene": "Skena",
+    "patogens": {
+      "title": "Identifikim i patogjenëve",
+      "desc": "Salmonella, Listeria dhe E. coli identifikohen me metoda të bazuara në ISO, brenda 24–72 orëve për rezultat paraprak."
+    },
+    "chemistry": {
+      "title": "Analiza kimike precize",
+      "desc": "HPLC, GC-MS dhe ICP-MS na lejojnë të zbulojmë mbetjet dhe aditivët në nivelet më të vogla — kalibrim i rregullt, leximet me kontroll dyfish."
+    },
+    "reporting": {
+      "title": "Raport profesional i nënshkruar",
+      "desc": "Raporti PDF, gati për audit dhe inspeksion, dorëzohet brenda 5–10 ditëve pune."
+    }
+  },
+  "process": {
+    "eyebrow": "PROCESI",
+    "title": "Nga mostra te raporti — proces transparent",
+    "subtitle": "Çdo hap regjistrohet, është i gjurmueshëm dhe gati për inspeksion.",
+    "stepLabel": "HAPI",
+    "step1": { "title": "Pranimi i mostrës",    "desc": "Mostra mbërrin në laborator, etiketohet me barkod, regjistrohet dhe verifikohet bashkë me dokumentet." },
+    "step2": { "title": "Përgatitja",            "desc": "Ekipi përgatit mostrën sipas metodës së zgjedhur — homogjenizim, filtrim, kondicionim." },
+    "step3": { "title": "Analiza",               "desc": "Testet kryhen me metoda të vlefshme në pajisje të kalibruara, me kontrolle paralel." },
+    "step4": { "title": "Verifikimi",            "desc": "Rezultatet kontrollohen dyfish nga personeli teknik — devijimet provohen sërish." },
+    "step5": { "title": "Raportimi",             "desc": "Raporti PDF i nënshkruar ngarkohet në sistemin tonë; ju e merrni me kodin e mostrës." }
+  },
+  "accreditation": {
+    "eyebrow": "AKREDITIMI",
+    "title": "Rrugëtimi ynë i akreditimit",
+    "body": "LaboraFood është në procesin e akreditimit nga Drejtoria e Akreditimit e Kosovës (DAK), sipas standardit ndërkombëtar ISO/IEC 17025:2017. Sistemi ynë i menaxhimit të cilësisë është ndërtuar mbi këto parime që në fillim.",
+    "honestyNote": "Nuk pretendojmë akreditim që nuk kemi — ja ku jemi në proces.",
+    "steps": {
+      "qms":         "Sistemi i menaxhimit të cilësisë i ngritur",
+      "docs":        "Dokumentacioni i përgatitur",
+      "application": "Aplikimi te DAK — në vazhdim",
+      "onsite":      "Vlerësimi në vendndodhje",
+      "decision":    "Vendimi i akreditimit"
+    },
+    "status": {
+      "done":       "Përfunduar",
+      "inProgress": "Në vazhdim",
+      "pending":    "Pritet"
+    }
+  },
+  "compliance": {
+    "eyebrow": "PAJTUESHMËRIA",
+    "title": "Punojmë sipas kornizave rregullatore",
+    "subtitle": "Metodologjia jonë respekton rregulloret e Kosovës dhe BE-së.",
+    "auv":   { "title": "AUV — Agjencia e Ushqimit dhe Veterinarisë", "desc": "Pajtueshmëri me rregulloret kombëtare të Kosovës për sigurinë e ushqimit." },
+    "eu178": { "title": "Rregullorja BE 178/2002",                     "desc": "Parimet e përgjithshme dhe kërkesat e ligjit europian për ushqimin." },
+    "skeniso":{ "title": "SK EN ISO — Standardet e Kosovës",           "desc": "Metodologjia jonë mbështetet në standardet e Kosovës dhe ato ndërkombëtare ISO." }
+  },
+  "trackingCta": {
+    "title": "Keni një mostër në laborator?",
+    "subtitle": "Shkruani kodin e gjurmimit dhe shikoni statusin aktual të analizës.",
+    "button": "Gjurmo Mostrën"
+  },
+  "tracking": {
+    "eyebrow": "GJURMIM MOSTRE",
+    "title": "Gjurmoni mostrën tuaj",
+    "subtitle": "Shkruani kodin e mostrës (p.sh. LF-2026-0123) për të parë statusin aktual.",
+    "placeholder": "P.sh. LF-2026-0123",
+    "button": "Kërko",
+    "errors": {
+      "invalid": "Kodi i mostrës është i pavlefshëm. Formati: LF-VVVV-NNNN.",
+      "notFound": "Nuk u gjet asnjë mostër me këtë kod."
+    },
+    "labels": {
+      "product": "Produkti",
+      "analysisType": "Lloji i analizës",
+      "receivedAt": "Data e pranimit",
+      "estimatedCompletion": "Përfundimi i parashikuar",
+      "completedAt": "Përfunduar më",
+      "currentStatus": "Statusi aktual"
+    },
+    "statuses": {
+      "received":  "Pranuar",
+      "preparing": "Në përgatitje",
+      "analyzing": "Në analizë",
+      "verifying": "Verifikim",
+      "completed": "Përfunduar"
+    },
+    "analysisTypes": {
+      "microbiology": "Mikrobiologji",
+      "chemistry":    "Kimi",
+      "both":         "Mikrobiologji + Kimi"
+    },
+    "reportReady": "Raporti juaj është gati."
+  },
+  "blogSection": {
+    "eyebrow": "BAZA E DIJES",
+    "title": "Nga laboratori",
+    "subtitle": "Metoda, rregullore dhe shënime nga sektori — për prodhuesit.",
+    "allPosts": "Të gjitha shkrimet",
+    "readingTime": "min lexim"
+  },
+  "blog": {
+    "eyebrow": "BLOG",
+    "title": "Shkrime nga laboratori",
+    "subtitle": "Metoda, rregullore dhe njohuri praktike."
+  },
+  "cta": {
+    "title": "A keni një mostër për analizë?",
+    "titleAccent": "Ne jemi gati.",
+    "subtitle": "Merrni ofertën në 5 minuta — kthim brenda 24 orëve.",
+    "primary": "Merr Ofertë",
+    "secondary": "Kontakto në WhatsApp"
+  },
+  "footer": {
+    "tagline": "Laborator i pavarur i analizave të ushqimit në Kosovë.",
+    "services": "Shërbimet",
+    "corporate": "Kompania",
+    "contact": "Kontakt",
+    "address": "Prizren, Kosovë",
+    "hours": "E Hënë–E Premte 08:30–17:00",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet e Përdorimit",
+    "cookies": "Politika e Cookies"
+  },
+  "about": {
+    "eyebrow": "RRETH NESH",
+    "title": "Shkenca,",
+    "titleAccent": "paanshmëria,",
+    "titleTail": "puna e shtëpisë.",
+    "intro": "LaboraFood është një laborator i pavarur i analizave të ushqimit me bazë në Prizren. Ne punojmë me prodhuesit dhe industrinë ushqimore për të garantuar siguri, cilësi dhe pajtueshmëri me rregulloret.",
+    "valuesEyebrow": "PARIMET TONA",
+    "valuesTitle": "Misioni — Vizioni — Vlerat",
+    "values": {
+      "mission": { "title": "Misioni",  "body": "Të ofrojmë analiza të sakta, të shpejta dhe transparente që mbrojnë shëndetin e konsumatorit dhe besimin në markë." },
+      "vision":  { "title": "Vizioni",  "body": "Të bëhemi laboratori më i besuar i ushqimit në Kosovë dhe rajon — referencë për saktësi dhe profesionalizëm." },
+      "values":  { "title": "Vlerat",   "body": "Ndershmëri shkencore, afërsi me klientin, përmirësim i vazhdueshëm — rezultati i paanshëm vjen gjithmonë i pari." }
+    },
+    "facility": {
+      "eyebrow": "OBJEKTI",
+      "title": "Laboratori ynë",
+      "subtitle": "Hapësira të dedikuara për mikrobiologji dhe kimi, me ndarje të rrjedhës së mostrës.",
+      "alt1": "Pamje e përgjithshme e laboratorit",
+      "alt2": "Pajisje kromatografike",
+      "alt3": "Vëzhgim me mikroskop",
+      "alt4": "Përgatitje e mostrës"
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "SHËRBIMET",
+    "title": "Dy fusha,",
+    "titleAccent": "mbulim i plotë",
+    "subtitle": "Më shumë se 30 metoda të zbatuara në mikrobiologji dhe kimi.",
+    "featured": "Analizat kryesore"
+  },
+  "analysesPage": {
+    "eyebrow": "ANALIZAT",
+    "title": "Të gjitha analizat",
+    "subtitle": "Filtrojini sipas fushës ose kërkoni me emrin e analizës.",
+    "searchPlaceholder": "Kërko analizë…"
+  },
+  "accreditationPage": {
+    "eyebrow": "AKREDITIMI",
+    "title": "I gjithë procesi,",
+    "titleAccent": "i hapur",
+    "subtitle": "LaboraFood është në procesin e akreditimit nga Drejtoria e Akreditimit e Kosovës (DAK), sipas standardit ISO/IEC 17025:2017."
+  },
+  "categories": {
+    "microbiology": "Mikrobiologji",
+    "chemistry": "Kimi"
+  },
+  "categoriesPlural": {
+    "microbiology": "Mikrobiologji",
+    "chemistry": "Kimi",
+    "regulation": "Rregullore",
+    "news": "Lajme"
+  },
+  "contactPage": {
+    "eyebrow": "KONTAKT",
+    "title": "Le të flasim",
+    "subtitle": "Keni një pyetje të shpejtë, konsulence apo kërkesë për vizitë në vend? Plotësoni formularin ose na kontaktoni drejtpërdrejt.",
+    "form": {
+      "name": "Emri dhe Mbiemri",
+      "namePlaceholder": "Emër Mbiemër",
+      "email": "Email",
+      "emailPlaceholder": "shembull@kompani.com",
+      "message": "Mesazhi juaj",
+      "messagePlaceholder": "Përshkruani shkurtimisht pyetjen…",
+      "privacy": "Të dhënat tuaja përpunohen sipas politikës së privatësisë.",
+      "submit": "Dërgo",
+      "submitting": "Duke u dërguar…",
+      "successTitle": "Faleminderit!",
+      "successBody": "Mesazhi u mor. Do t'ju kthehemi brenda 24 orëve.",
+      "newMessage": "Shkruaj mesazh të ri"
+    },
+    "info": {
+      "address": "Prizren, Kosovë",
+      "hours": "E Hënë–E Premte 08:30–17:00",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email"
+    }
+  },
+  "quotePage": {
+    "eyebrow": "MERR OFERTË",
+    "title": "Ofertë në 5 minuta",
+    "subtitle": "Plotësoni tre hapat — do t'ju kthejmë me një ofertë të detajuar brenda 24 orëve.",
+    "stepper": {
+      "step1": "Kompania",
+      "step2": "Produkti & Analizat",
+      "step3": "Kontakti"
+    },
+    "step1Title": "Të dhënat e kompanisë",
+    "step2Title": "Produkti dhe analizat",
+    "step3Title": "Të dhënat e kontaktit",
+    "fields": {
+      "companyName": "Emri i kompanisë *",
+      "companyNamePlaceholder": "P.sh. Bylmeti Sh.p.k.",
+      "productType": "Lloji i produktit",
+      "productTypePlaceholder": "P.sh. djathë i freskët",
+      "analysesSelected": "të zgjedhura",
+      "analysesLabel": "Analizat e kërkuara",
+      "message": "Shënim",
+      "messagePlaceholder": "Diçka tjetër që duhet të dimë?",
+      "contactPerson": "Emri dhe Mbiemri *",
+      "contactPersonPlaceholder": "Personi përgjegjës",
+      "email": "Email *",
+      "emailPlaceholder": "shembull@kompani.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+383 …",
+      "privacyConsent": "Pranoj politikën e privatësisë dhe përpunimin e të dhënave.",
+      "privacyReadMore": "lexo më shumë"
+    },
+    "back": "Kthehu",
+    "next": "Vazhdo",
+    "submit": "Dërgo Kërkesën",
+    "submitting": "Duke u dërguar…",
+    "successTitle": "Faleminderit!",
+    "successBody": "Kërkesa juaj u dërgua. Do t'ju kontaktojmë me email ose telefon brenda 24 orëve.",
+    "successHome": "Ballina",
+    "successAnalyses": "Shiko Analizat",
+    "errors": {
+      "companyRequired": "Emri i kompanisë është i detyrueshëm.",
+      "contactRequired": "Emri dhe mbiemri janë të detyrueshëm.",
+      "emailInvalid": "Vendosni një email të vlefshëm.",
+      "privacyRequired": "Duhet të pranoni politikën e privatësisë për të vazhduar.",
+      "generic": "Diçka shkoi keq. Provoni sërish.",
+      "allRequired": "Të gjitha fushat janë të detyrueshme."
+    }
+  },
+  "notFound": {
+    "title": "Faqja nuk u gjet",
+    "subtitle": "Faqja që po kërkoni ka lëvizur ose nuk ekziston.",
+    "back": "Kthehu në Ballina"
+  }
+}
