@@ -88,8 +88,8 @@ const Td = ({ children, className = "" }) => <td className={`px-4 py-3 ${classNa
 
 const ANALYSIS_TYPE_LABEL = {
   microbiology: "Mikrobiologji",
-  chemistry: "Kimi",
-  both: "Mikrobio + Kimi",
+  chemistry: "Fizikokimi",
+  both: "Mikrobio + Fizikokimi",
 };
 
 function formatDate(iso) {

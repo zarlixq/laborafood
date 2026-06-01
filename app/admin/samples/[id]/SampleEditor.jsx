@@ -228,8 +228,8 @@ function Card({ title, children }) {
 
 const ANALYSIS_TYPE_LABEL = {
   microbiology: "Mikrobiologji",
-  chemistry: "Kimi",
-  both: "Mikrobiologji + Kimi",
+  chemistry: "Fizikokimi",
+  both: "Mikrobiologji + Fizikokimi",
 };
 
 function formatDate(iso) {

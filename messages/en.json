@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "LaboraFood",
     "tagline": "Food analysis laboratory in Kosovo",
-    "defaultDescription": "Independent microbiological and chemical food analysis laboratory in Prizren, Kosovo."
+    "defaultDescription": "Independent microbiological and physicochemical food and water analysis laboratory in Prizren, Kosovo."
   },
   "nav": {
     "home": "Home",
@@ -35,10 +35,10 @@
     "noResults": "No results found."
   },
   "hero": {
-    "badge": "Microbiology & Chemistry Lab in Kosovo",
+    "badge": "Microbiology & Physicochemical Lab in Kosovo",
     "title": "Food safety,",
     "titleAccent": "spoken in the language of science.",
-    "subtitle": "Microbiological and chemical analyses for producers and the food industry in Kosovo and the Balkans.",
+    "subtitle": "Microbiological and physicochemical analyses for food, drinking water and wastewater — for producers and the food industry in Kosovo and the Balkans.",
     "ctaPrimary": "Get a Quote",
     "ctaSecondary": "Browse Analyses",
     "scrollCue": "Explore",
@@ -55,32 +55,32 @@
       "title": "Microbiological Analyses",
       "subtitle": "Pathogens, hygiene indicators, spoilage organisms",
       "h1": "Salmonella spp.",
-      "h2": "Escherichia coli (E. coli)",
-      "h3": "Listeria monocytogenes",
-      "h4": "Staphylococcus aureus",
-      "h5": "Total Plate Count (TPC)",
-      "h6": "Yeast & Mould",
-      "h7": "Enterobacteriaceae",
-      "h8": "Bacillus cereus"
+      "h2": "Listeria monocytogenes",
+      "h3": "Escherichia coli",
+      "h4": "Coagulase-positive Staphylococci",
+      "h5": "Enterobacteriaceae",
+      "h6": "Aerobic colony count",
+      "h7": "Yeasts & moulds",
+      "h8": "Total coliforms"
     },
     "chem": {
-      "title": "Chemical Analyses",
-      "subtitle": "Composition, residues, additives, nutrition",
-      "h1": "Heavy metals (Pb, Cd, Hg, As)",
-      "h2": "Pesticide residues",
-      "h3": "Food additives",
-      "h4": "Nutrition panel",
-      "h5": "Moisture & dry matter",
-      "h6": "pH & acidity",
-      "h7": "Mycotoxins (Aflatoxin, OTA)",
-      "h8": "Salt content"
+      "title": "Physicochemical Analyses",
+      "subtitle": "Composition, water quality and nutritional parameters",
+      "h1": "pH",
+      "h2": "Conductivity",
+      "h3": "Turbidity",
+      "h4": "BOD₅",
+      "h5": "COD",
+      "h6": "Moisture",
+      "h7": "Protein (Kjeldahl)",
+      "h8": "Total Fat"
     }
   },
   "why": {
     "eyebrow": "WHY LABORAFOOD",
     "title": "Why choose LaboraFood",
     "accuracy":     { "title": "Scientific accuracy",  "desc": "Validated methods, calibrated equipment and quality control at every step." },
-    "speed":        { "title": "Fast reporting",       "desc": "Microbiology 3–7 working days · Chemistry 5–10 working days." },
+    "speed":        { "title": "Fast reporting",       "desc": "Microbiology and physicochemical analyses delivered within validated turnaround times." },
     "privacy":      { "title": "Confidentiality",      "desc": "Customer data and results are kept per ISO/IEC 17025 §4.2 principles." },
     "transparency": { "title": "Transparent process",  "desc": "Each sample receives a unique tracking code — follow status online." }
   },
@@ -171,8 +171,8 @@
     },
     "analysisTypes": {
       "microbiology": "Microbiology",
-      "chemistry":    "Chemistry",
-      "both":         "Microbiology + Chemistry"
+      "chemistry":    "Physicochemical",
+      "both":         "Microbiology + Physicochemical"
     },
     "reportReady": "Your report is ready."
   },
@@ -223,7 +223,7 @@
     "facility": {
       "eyebrow": "FACILITY",
       "title": "Our laboratory",
-      "subtitle": "Dedicated areas for microbiology and chemistry, with sample-flow separation.",
+      "subtitle": "Dedicated areas for microbiology and physicochemical analyses, with sample-flow separation.",
       "alt1": "Overview of the lab",
       "alt2": "Chromatography equipment",
       "alt3": "Microscope examination",
@@ -234,14 +234,19 @@
     "eyebrow": "SERVICES",
     "title": "Two domains,",
     "titleAccent": "full coverage",
-    "subtitle": "Over 30 methods across microbiology and chemistry.",
+    "subtitle": "Methods across microbiology and physicochemical analyses, for food, drinking water and wastewater.",
     "featured": "Featured analyses"
   },
   "analysesPage": {
     "eyebrow": "ANALYSES",
     "title": "All analyses",
     "subtitle": "Filter by domain or search by analysis name.",
-    "searchPlaceholder": "Search analysis…"
+    "searchPlaceholder": "Search analysis…",
+    "matrices": {
+      "drinking_water": "Drinking water",
+      "food": "Food",
+      "wastewater": "Wastewater"
+    }
   },
   "accreditationPage": {
     "eyebrow": "ACCREDITATION",
@@ -251,7 +256,7 @@
   },
   "categories": {
     "microbiology": "Microbiology",
-    "chemistry": "Chemistry"
+    "physicochemical": "Physicochemical"
   },
   "categoriesPlural": {
     "microbiology": "Microbiology",

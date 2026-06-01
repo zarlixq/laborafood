@@ -28,7 +28,7 @@ export default function NewSampleForm() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {[
             { value: "microbiology", label: "Mikrobiologji" },
-            { value: "chemistry", label: "Kimi" },
+            { value: "chemistry", label: "Fizikokimi" },
             { value: "both", label: "Të dyja" },
           ].map((opt) => (
             <label key={opt.value} className="cursor-pointer">

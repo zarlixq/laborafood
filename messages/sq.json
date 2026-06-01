@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "LaboraFood",
     "tagline": "Laborator i analizave të ushqimit në Kosovë",
-    "defaultDescription": "Laborator i pavarur i analizave mikrobiologjike dhe kimike të ushqimit në Prizren, Kosovë."
+    "defaultDescription": "Laborator i pavarur i analizave mikrobiologjike dhe fizikokimike të ushqimit dhe ujit në Prizren, Kosovë."
   },
   "nav": {
     "home": "Ballina",
@@ -35,10 +35,10 @@
     "noResults": "Nuk u gjet asnjë rezultat."
   },
   "hero": {
-    "badge": "Laborator i Mikrobiologjisë dhe Kimisë në Kosovë",
+    "badge": "Laborator i Mikrobiologjisë dhe Fizikokimisë në Kosovë",
     "title": "Siguria e ushqimit,",
     "titleAccent": "e shprehur me gjuhën e shkencës.",
-    "subtitle": "Analiza mikrobiologjike dhe kimike për prodhuesit dhe industrinë ushqimore në Kosovë dhe Ballkan.",
+    "subtitle": "Analiza mikrobiologjike dhe fizikokimike për ushqim, ujë të pijshëm dhe ujëra të zeza — për prodhuesit dhe industrinë ushqimore në Kosovë dhe Ballkan.",
     "ctaPrimary": "Merr Ofertë",
     "ctaSecondary": "Shiko Analizat",
     "scrollCue": "Zbulo",
@@ -53,34 +53,34 @@
     "viewDetails": "Shiko detajet",
     "micro": {
       "title": "Analiza Mikrobiologjike",
-      "subtitle": "Patogjenë, tregues higjienik, mikroorganizma të dëmshëm",
+      "subtitle": "Patogjenë, tregues higjiene, organizma prishjeje",
       "h1": "Salmonella spp.",
-      "h2": "Escherichia coli (E. coli)",
-      "h3": "Listeria monocytogenes",
-      "h4": "Staphylococcus aureus",
-      "h5": "Numërimi total i bakterieve (TPC)",
-      "h6": "Mavija dhe maja",
-      "h7": "Enterobacteriaceae",
-      "h8": "Bacillus cereus"
+      "h2": "Listeria monocytogenes",
+      "h3": "Escherichia coli",
+      "h4": "Stafilokoket koagulazë-pozitive",
+      "h5": "Enterobacteriaceae",
+      "h6": "Numërimi aerob i kolonive",
+      "h7": "Maja dhe myk",
+      "h8": "Koliformët totalë"
     },
     "chem": {
-      "title": "Analiza Kimike",
-      "subtitle": "Përbërje, mbetje, aditivë, vlera ushqyese",
-      "h1": "Metale të rënda (Pb, Cd, Hg, As)",
-      "h2": "Mbetjet e pesticideve",
-      "h3": "Aditivët ushqimorë",
-      "h4": "Vlerat ushqyese",
-      "h5": "Lagështia dhe lënda e thatë",
-      "h6": "pH dhe aciditeti",
-      "h7": "Mykotoksinat (Aflatoksina, OTA)",
-      "h8": "Përmbajtja e kripës"
+      "title": "Analiza Fizikokimike",
+      "subtitle": "Përbërja, cilësia e ujit dhe parametrat ushqyes",
+      "h1": "pH",
+      "h2": "Përçueshmëria elektrike",
+      "h3": "Turbullira",
+      "h4": "BOD₅",
+      "h5": "COD",
+      "h6": "Lagështia",
+      "h7": "Proteina (Kjeldahl)",
+      "h8": "Yndyra totale"
     }
   },
   "why": {
     "eyebrow": "PSE LABORAFOOD",
     "title": "Pse të zgjedhni LaboraFood",
     "accuracy":     { "title": "Saktësi shkencore",   "desc": "Metoda të verifikuara, pajisje të kalibruara dhe kontroll cilësie në çdo hap." },
-    "speed":        { "title": "Raportim i shpejtë",  "desc": "Mikrobiologji 3–7 ditë pune · Kimike 5–10 ditë pune." },
+    "speed":        { "title": "Raportim i shpejtë",  "desc": "Analizat mikrobiologjike dhe fizikokimike dorëzohen brenda afateve të vlefshme." },
     "privacy":      { "title": "Konfidencialitet",    "desc": "Të dhënat e klientit dhe rezultatet ruhen sipas parimeve ISO/IEC 17025 §4.2." },
     "transparency": { "title": "Proces transparent",  "desc": "Çdo mostër ka kod unik gjurmimi — statusi ndiqet online." }
   },
@@ -171,8 +171,8 @@
     },
     "analysisTypes": {
       "microbiology": "Mikrobiologji",
-      "chemistry":    "Kimi",
-      "both":         "Mikrobiologji + Kimi"
+      "chemistry":    "Fizikokimi",
+      "both":         "Mikrobiologji + Fizikokimi"
     },
     "reportReady": "Raporti juaj është gati."
   },
@@ -223,7 +223,7 @@
     "facility": {
       "eyebrow": "OBJEKTI",
       "title": "Laboratori ynë",
-      "subtitle": "Hapësira të dedikuara për mikrobiologji dhe kimi, me ndarje të rrjedhës së mostrës.",
+      "subtitle": "Hapësira të dedikuara për mikrobiologji dhe fizikokimi, me ndarje të rrjedhës së mostrës.",
       "alt1": "Pamje e përgjithshme e laboratorit",
       "alt2": "Pajisje kromatografike",
       "alt3": "Vëzhgim me mikroskop",
@@ -234,14 +234,19 @@
     "eyebrow": "SHËRBIMET",
     "title": "Dy fusha,",
     "titleAccent": "mbulim i plotë",
-    "subtitle": "Më shumë se 30 metoda të zbatuara në mikrobiologji dhe kimi.",
+    "subtitle": "Metoda në mikrobiologji dhe fizikokimi, për ushqim, ujë të pijshëm dhe ujëra të zeza.",
     "featured": "Analizat kryesore"
   },
   "analysesPage": {
     "eyebrow": "ANALIZAT",
     "title": "Të gjitha analizat",
     "subtitle": "Filtrojini sipas fushës ose kërkoni me emrin e analizës.",
-    "searchPlaceholder": "Kërko analizë…"
+    "searchPlaceholder": "Kërko analizë…",
+    "matrices": {
+      "drinking_water": "Ujë i pijshëm",
+      "food": "Ushqim",
+      "wastewater": "Ujëra të zeza"
+    }
   },
   "accreditationPage": {
     "eyebrow": "AKREDITIMI",
@@ -251,7 +256,7 @@
   },
   "categories": {
     "microbiology": "Mikrobiologji",
-    "chemistry": "Kimi"
+    "physicochemical": "Fizikokimi"
   },
   "categoriesPlural": {
     "microbiology": "Mikrobiologji",

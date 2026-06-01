@@ -14,6 +14,7 @@ import {
 export default function AnalysesClient() {
   const t  = useTranslations("analysesPage");
   const tc = useTranslations("categories");
+  const tm = useTranslations("analysesPage.matrices");
   const tCommon = useTranslations("common");
   const locale = useLocale();
   const [active, setActive] = useState("all");
@@ -79,7 +80,14 @@ export default function AnalysesClient() {
                 className="p-5 lg:p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
               >
                 <div>
-                  <div className="font-medium text-ink">{getAnalysisName(a, locale)}</div>
+                  <div className="font-medium text-ink flex flex-wrap items-center gap-2">
+                    {getAnalysisName(a, locale)}
+                    {a.matrix && (
+                      <span className="inline-flex items-center rounded-full bg-ink/5 text-ink-soft px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider">
+                        {tm(a.matrix)}
+                      </span>
+                    )}
+                  </div>
                   <div className="text-sm text-ink-soft mt-1 leading-relaxed">
                     {getAnalysisDescription(a, locale)}
                   </div>
